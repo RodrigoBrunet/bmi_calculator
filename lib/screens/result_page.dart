@@ -20,7 +20,7 @@ class ResultPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Calculadora de IMC'),
+        title: Text('Calculadora de IMG'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -29,7 +29,7 @@ class ResultPage extends StatelessWidget {
           Expanded(
             child: Container(
               padding: EdgeInsets.all(12.0),
-              alignment: Alignment.bottomLeft,
+              alignment: Alignment.topCenter,
               child: Text(
                 'Resultado',
                 style: kTitleTextStyle,
@@ -53,11 +53,6 @@ class ResultPage extends StatelessWidget {
                   ),
                   Text(
                     interpretation,
-                    textAlign: TextAlign.center,
-                    style: kBodyTextStyle,
-                  ),
-                  Text(
-                    img,
                     textAlign: TextAlign.center,
                     style: kBodyTextStyle,
                   ),

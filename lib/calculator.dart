@@ -41,11 +41,11 @@ class Calculator {
 
   String getInterpretation() {
     if (_imc >= 25) {
-      return 'Você tem um peso acima do normal !!!';
+      return 'Você tem um peso acima do normal !';
     } else if (_imc >= 18.5) {
-      return 'Você tem um peso normal, coma muita picanha, com cerveja !!!';
+      return 'Você tem um peso normal !';
     } else {
-      return 'Você esta abaixo do peso.. magrela!!!';
+      return 'Você esta abaixo do peso !';
     }
   }
 }

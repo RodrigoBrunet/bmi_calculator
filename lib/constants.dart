@@ -23,21 +23,24 @@ const kLargeButtonTextStyle = TextStyle(
 );
 
 const kTitleTextStyle = TextStyle(
-  fontSize: 50.0,
+  fontSize: 45.0,
   fontWeight: FontWeight.bold,
+  color: Color(0xFFEEC736),
 );
 
 const kResultTextStyle = TextStyle(
-  color: Color(0xFF24D876),
+  color: Color(0xFFEEC736),
   fontSize: 22.0,
   fontWeight: FontWeight.bold,
 );
 
 const kBMITextStyle = TextStyle(
+  color: Color(0xFFEEC736),
   fontSize: 100.0,
   fontWeight: FontWeight.bold,
 );
 
 const kBodyTextStyle = TextStyle(
+  color: Color(0xFFEEC736),
   fontSize: 20.0,
 );

@@ -24,8 +24,6 @@ class _InputPageState extends State<InputPage> {
   int male = 1;
   int female = 0;
 
-  final bar = SnackBar(content: Text('teste'));
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
