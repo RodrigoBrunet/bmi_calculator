@@ -3,6 +3,7 @@ import 'package:bmi_calculator/components/botton_button.dart';
 import 'package:bmi_calculator/components/icon_content.dart';
 import 'package:bmi_calculator/components/reusable_card.dart';
 import 'package:bmi_calculator/components/round_icon_button.dart';
+import 'package:bmi_calculator/components/snack_bar.dart';
 import 'package:bmi_calculator/constants.dart';
 import 'package:bmi_calculator/enum/enum_gender.dart';
 import 'package:bmi_calculator/screens/result_page.dart';
@@ -22,6 +23,8 @@ class _InputPageState extends State<InputPage> {
   int age = 20;
   int male = 1;
   int female = 0;
+
+  final bar = SnackBar(content: Text('teste'));
 
   @override
   Widget build(BuildContext context) {
@@ -213,19 +216,23 @@ class _InputPageState extends State<InputPage> {
           BottomButton(
             buttonTitle: 'calcular'.toUpperCase(),
             onTap: () {
-              Calculator calc = Calculator(
-                  height: height, weight: weight, sex: gender, age: age);
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => ResultPage(
-                    bmiResult: calc.calculateBmi(),
-                    resultText: calc.getResult(),
-                    interpretation: calc.getInterpretation(),
-                    img: calc.calculateImg(),
+              if (gender != null) {
+                Calculator calc = Calculator(
+                    height: height, weight: weight, sex: gender, age: age);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ResultPage(
+                      bmiResult: calc.calculateBmi(),
+                      resultText: calc.getResult(),
+                      interpretation: calc.getInterpretation(),
+                      img: calc.calculateImg(),
+                    ),
                   ),
-                ),
-              );
+                );
+              } else {
+                SnackBars.error.show(context);
+              }
             },
           ),
         ],
